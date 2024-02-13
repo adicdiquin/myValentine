@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff86d9, #ff93f6);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%; /* Set a maximum width for larger screens */
+    margin: 20px; /* Add some margin for better spacing */
+}
+
+button {
+    background-color: #ff5e63;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3a3f;
+}
+
+/* Media query for phones */
+@media (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 100%; /* Adjust maximum width for smaller screens */
+    }
+}
